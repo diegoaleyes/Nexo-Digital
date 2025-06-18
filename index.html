@@ -6,26 +6,26 @@
   <title>NexoDigital – Diseño Web para Pymes y Autónomos en Málaga</title>
   <meta name="description" content="Webs modernas y asequibles en Málaga. Ofrecemos diseño, SEO local y soporte transparente. ¡Lanzamos tu negocio online!" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+
   <link rel="canonical" href="https://www.nexodigital.com/" />
 </head>
 <body>
+<div id="loader" class="loader"></div>
 
 <!-- Barra superior -->
 <div class="topbar">
   <div>
     <span>📞 +34 600 78 41 69</span>
-    
-
     <a href="mailto:info@nexodigital.com">info@nexodigital.com</a>
   </div>
   <div>
     <a href="#" aria-label="Facebook"><img src="./icons8-facebook-logo-94.png" alt="" class="redes"></a>
-    <a href="#" aria-label="Twitter"> <img src="./icons8-twitter-50.png" alt="" class="redes"></a>
+    <a href="#" aria-label="Twitter"><img src="./icons8-twitter-50.png" alt="" class="redes"></a>
     <a href="#" aria-label="LinkedIn"><img src="./linkedin.png" alt="" class="redes"></a>
     <a href="#" aria-label="Instagram"><img src="./icons8-instagram-logo-94.png" alt="" class="redes"></a>
-    <button id="darkModeToggle" class="btn-primary">🌗  dia/noche</button>
+    
   </div>
-  
 </div>
 
 <!-- Header -->
@@ -35,7 +35,7 @@
     <span>NexoDigital</span>
   </div>
   <nav>
-    <ul>
+    <ul id="nav-list">
       <li><a href="#" class="active">HOME</a></li>
       <li><a href="#servicios">SERVICIOS</a></li>
       <li><a href="#proyectos">PROYECTOS</a></li>
@@ -43,6 +43,7 @@
       <li><a href="#contacto">CONTACTO</a></li>
     </ul>
   </nav>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
 </header>
 
 <!-- Slider principal -->
@@ -56,90 +57,80 @@
 
 <!-- Sección: Quiénes Somos -->
 <main class="main-content">
-  
-    <div class="info-card">
+  <div class="info-card">
     <section class="info">
-    <h2>Agencia Web en Málaga: Tu Socio Digital</h2>
-    <p>Somos especialistas en <strong>diseño web para pymes en Málaga</strong>, ofreciendo soluciones digitales a medida para negocios que necesitan visibilidad, confianza y resultados. También ayudamos a gestionar el <strong>Kit Digital</strong> para quienes no accedieron aún.</p>
+      <h2>Agencia Web en Málaga: Tu Socio Digital</h2>
+      <p>Somos especialistas en <strong>diseño web para pymes en Málaga</strong>, ofreciendo soluciones digitales a medida para negocios que necesitan visibilidad, confianza y resultados. También ayudamos a gestionar el <strong>Kit Digital</strong> para quienes no accedieron aún.</p>
     </section>
-
     <section class="tech-icons">
-    <img src="./analysis.png" alt="Tecnologías utilizadas para diseño web en Málaga" />
+      <img src="./analysis.png" alt="Tecnologías utilizadas para diseño web en Málaga" />
     </section>
-    </div>
-  
+  </div>
 
-  <!-- Sección: Servicios -->
+  <!-- Servicios -->
   <section id="servicios" class="info">
     <h2>Servicios de Diseño Web y SEO en Málaga</h2>
     <div class="services">
-
       <div class="service-card">
         <div class="service-icon"><img src="./analysis.png" class="service-icon" alt=""></div>
         <h3>Diseño Web Responsive</h3>
         <p>Webs adaptadas a móviles y tablets, optimizadas para <strong>Google y usuarios</strong>. Ideal para <strong>pymes en Málaga</strong>.</p>
-        <img src="./" class="movil" alt="">
       </div>
-      
-
       <div class="service-card">
         <div class="service-icon"><img src="./seo.png" class="service-icon" alt=""></div>
         <h3>SEO Local</h3>
         <p>Posicionamos tu negocio en Málaga en los primeros resultados con <strong>estrategias de SEO Local</strong>.</p>
       </div>
-
       <div class="service-card">
         <div class="service-icon"><img src="./mantenimiento.png" class="service-icon" alt=""></div>
         <h3>Mantenimiento y Actualización</h3>
         <p>Gestión técnica continua de tu web para que siempre funcione al 100% y sea segura.</p>
       </div>
-
     </div>
   </section>
 
-  <!-- Sección: Proyectos -->
+  <!-- Proyectos -->
   <section id="proyectos" class="info">
     <h2>Casos Reales de Webs para Pymes en Málaga</h2>
     <p>Descubre ejemplos de páginas web desarrolladas para comercios, profesionales y <strong>autónomos malagueños</strong>. Resultados reales y adaptados al presupuesto de cada cliente.</p>
-      <h2>Algunos trabajos recientes</h2>
-      <div class="galeria">
-        <img src="./pizzeria dieci.png" alt="Proyecto web para negocio local" class="webs" />
-        <img src="./cafe grid.png" alt="Diseño para cafetería artesanal" class="webs" />
-        <img src="./naranja tablet.jpg" alt="Landing page para profesional independiente"  class="proyectos"/>
-      </div>
+    <h2>Algunos trabajos recientes</h2>
+    <div class="galeria">
+      <img src="./pizzeria dieci.png" alt="Proyecto web para negocio local" class="webs" />
+      <img src="./cafe grid.png" alt="Diseño para cafetería artesanal" class="webs" />
+      <img src="./naranja tablet.jpg" alt="Landing page para profesional independiente" class="proyectos" />
+    </div>
   </section>
-<!-- Sección: Blog -->
-<section id="blog" class="info">
-  <div class="blog">
-    <h2>Blog: Consejos y Recursos para Digitalizar tu Negocio</h2>
-    <article>
-      <h3>¿No accediste al Kit Digital? Esto puedes hacer ahora</h3>
-      <p>Guía paso a paso para <strong>autónomos y pymes sin Kit Digital</strong> que buscan tener su web profesional sin complicaciones. Soluciones asequibles desde 499 €.</p>
-      <a href="#">Leer más</a>
-    </article>
-    <article>
-      <h3>Diseño web barato en Málaga: ¿qué incluye y qué evitar?</h3>
-      <p>Todo lo que debes saber antes de contratar una <strong>página web económica en Málaga</strong>. Lo bueno, lo malo y lo imprescindible.</p>
-      <a href="#">Leer más</a>
-    </article>
-  </div>
-</section>
 
+  <!-- Blog -->
+  <section id="blog" class="info">
+    <div class="blog">
+      <h2>Blog: Consejos y Recursos para Digitalizar tu Negocio</h2>
+      <article>
+        <h3>¿No accediste al Kit Digital? Esto puedes hacer ahora</h3>
+        <p>Guía paso a paso para <strong>autónomos y pymes sin Kit Digital</strong> que buscan tener su web profesional sin complicaciones. Soluciones asequibles desde 499 €.</p>
+        <a href="#">Leer más</a>
+      </article>
+      <article>
+        <h3>Diseño web barato en Málaga: ¿qué incluye y qué evitar?</h3>
+        <p>Todo lo que debes saber antes de contratar una <strong>página web económica en Málaga</strong>. Lo bueno, lo malo y lo imprescindible.</p>
+        <a href="#">Leer más</a>
+      </article>
+    </div>
+  </section>
 </main>
 
 <!-- Contacto -->
 <section id="contacto" class="info">
   <h2>Contáctanos: Diseño Web en Málaga</h2>
-  <p>¿Listo para lanzar tu web? Escríbenos y recibe tu presupuesto gratis.</p>
-  
- <form id="contact-form" class="contact-form">
-  <input type="text" name="user_name" placeholder="Tu nombre" required />
-  <input type="email" name="user_email" placeholder="Tu correo electrónico" required />
-  <textarea name="message" placeholder="Cuéntanos tu idea o consulta..." required></textarea>
-  <button type="submit">Enviar mensaje</button>
-  <p id="form-status" class="form-status"></p>
-</form>
+  <p>Tu negocio merece una web profesional. Contáctanos y en 24 h te enviamos una propuesta clara, sin compromiso.</p>
 
+  <form id="contact-form" class="contact-form">
+    <input type="text" name="user_name" placeholder="Tu nombre" required />
+    <input type="email" name="user_email" placeholder="Tu correo electrónico" required />
+    <textarea name="message" placeholder="Cuéntanos tu idea o consulta..." required></textarea>
+    <button type="submit" class="btn-primary">Enviar mensaje</button>
+    <p id="form-status" class="form-status"></p>
+  </form>
 </section>
 
 <!-- Footer -->
@@ -147,12 +138,10 @@
   <p>© 2025 NexoDigital. Diseño web en Málaga. Todos los derechos reservados. <a href="mailto:info@nexodigital.com">info@nexodigital.com</a></p>
 </footer>
 
-<!-- WhatsApp flotante -->
-<a href="https://wa.me/34600784169" class="whatsapp-btn" aria-label="WhatsApp NexoDigital Málaga">
-  💬
-</a>
+<!-- WhatsApp -->
+<a href="https://wa.me/34600784169" class="whatsapp-btn" aria-label="WhatsApp NexoDigital Málaga">💬</a>
 
-
+<!-- Scripts -->
 <script>
   const toggleBtn = document.getElementById('darkModeToggle');
   toggleBtn.addEventListener('click', () => {
@@ -163,12 +152,12 @@
 
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
-  emailjs.init("TU_USER_ID");
+  emailjs.init("afrDtJqNTjgF-BQc-"); // ← SOLO la clave pública
 
   document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
     const status = document.getElementById('form-status');
-    emailjs.sendForm('TU_SERVICE_ID', 'TU_TEMPLATE_ID', this)
+    emailjs.sendForm('service_ba3pyxw', 'template_ob46l7k', this)
       .then(() => {
         status.textContent = "✅ Mensaje enviado correctamente.";
         this.reset();
@@ -178,11 +167,24 @@
       });
   });
 </script>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+  ScrollReveal().reveal('.service-card, .info-card, .galeria img, .blog article, .contact-form', {
+    duration: 1000,
+    distance: '40px',
+    easing: 'ease-out',
+    origin: 'bottom',
+    interval: 100
+  });
+</script>
+
 <script>
   function toggleMenu() {
-    const navbar = document.getElementById("navbar");
-    navbar.classList.toggle("active");
+    const nav = document.querySelector("nav ul");
+    nav.classList.toggle("show");
   }
 </script>
+
 </body>
 </html>
