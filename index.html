@@ -49,7 +49,9 @@
 <!-- Slider principal -->
 <section class="slider">
   <div class="content">
-    <h1>Diseño Web Profesional en Málaga para Pymes y Autónomos</h1>
+  //<h1 id="typing-text">Diseño web profesional en Malaga</h1>
+
+
     <p>Desarrollamos sitios web modernos, adaptados a tu negocio y optimizados para destacar en Google. Precios accesibles y soporte 24/7.</p>
     <a href="#servicios" class="btn-primary">Nuestros Servicios</a>
   </div>
@@ -121,14 +123,17 @@
 
 <!-- Contacto -->
 <section id="contacto" class="info">
+  
+
   <h2>Contáctanos: Diseño Web en Málaga</h2>
   <p>Tu negocio merece una web profesional. Contáctanos y en 24 h te enviamos una propuesta clara, sin compromiso.</p>
 
-  <form id="contact-form" class="contact-form">
-    <input type="text" name="user_name" placeholder="Tu nombre" required />
-    <input type="email" name="user_email" placeholder="Tu correo electrónico" required />
-    <textarea name="message" placeholder="Cuéntanos tu idea o consulta..." required></textarea>
-    <button type="submit" class="btn-primary">Enviar mensaje</button>
+  <form id="contact-form" name="contact-form"   class="contact-form">
+    <input type="text" name="nombre" placeholder="Tu nombre" required />
+    <input type="email" name="email" placeholder="Tu correo electrónico" required />
+    <textarea name="mensaje" placeholder="Cuéntanos tu idea o consulta..." required></textarea>
+   <button type="submit" class="btn-primary bubble-btn">Enviar mensaje</button>
+
     <p id="form-status" class="form-status"></p>
   </form>
 </section>
@@ -152,7 +157,7 @@
 
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
-  emailjs.init("afrDtJqNTjgF-BQc-"); // ← SOLO la clave pública
+  emailjs.init("yY6EadVSGVV3RC-R9"); // ← SOLO la clave pública
 
   document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();

@@ -894,7 +894,7 @@ footer {
 
 @media (max-width: 775px) {
 
-}
+
 .info-card {
   display: flex;
   flex-direction: column;
@@ -924,3 +924,152 @@ footer {
   justify-content: center;
   flex-wrap: nowrap;
 }
+}
+
+
+.loader {
+  position: fixed;
+  background: white url('https://i.gifer.com/ZKZg.gif') center center no-repeat;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+header.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+.bubble-btn {
+  position: relative;
+  overflow: hidden;
+  background: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.bubble {
+  position: absolute;
+  bottom: 0;
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: rise 1s ease forwards;
+}
+@keyframes rise {
+  to {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+}
+.tilt {
+  perspective: 1000px;
+  transition: transform 0.2s ease;
+  transform-style: preserve-3d;
+}
+/* Header general */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  position: relative;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.hamburger {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* Menú principal (modo móvil inicialmente oculto) */
+nav#mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 75%;
+  height: 100%;
+  background: #fff;
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+  transition: right 0.4s ease;
+  padding-top: 5rem;
+}
+
+nav#mobile-menu ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+nav#mobile-menu ul li {
+  margin: 25px 0;
+}
+
+nav#mobile-menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+nav#mobile-menu ul li a:hover {
+  color: #4CAF50;
+}
+
+nav#mobile-menu.active {
+  right: 0;
+}
+
+/* Solo visible en móviles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav#mobile-menu {
+    display: block;
+  }
+
+  nav#mobile-menu ul li a {
+    font-weight: bold;
+  }
+
+  nav:not(#mobile-menu) {
+    display: none; /* Oculta el menú de escritorio en móvil */
+  }
+}
+/* ... tu CSS existente ... */
+/* (Lo que me pasaste no se modifica, lo dejamos tal cual) */
+
+/* === INICIO DEL BLOQUE NUEVO === */
+.dark-mode .contact-form input:focus,
+.dark-mode .contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(120, 183, 65, 0.7);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.3);
+}
+/* === FIN DEL BLOQUE NUEVO === */
+
