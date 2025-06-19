@@ -190,6 +190,54 @@
     nav.classList.toggle("show");
   }
 </script>
+<!-- Aviso Cookies -->
+<div id="cookieConsent" style="
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  max-width: 400px;
+  background: #222;
+  color: #eee;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+  ">
+  <div style="flex: 1; margin-right: 15px;">
+    Usamos EmailJS para enviar mensajes de contacto. No usamos cookies propias ni de terceros.
+    Consulta nuestra <a href="/privacidad" style="color: #4FC3F7; text-decoration: underline;">Política de Privacidad</a>.
+  </div>
+  <button id="acceptCookies" style="
+    background: #4FC3F7;
+    border: none;
+    color: #222;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    ">
+    Aceptar
+  </button>
+</div>
+
+<script>
+  // Si ya aceptó, ocultar el banner
+  if(localStorage.getItem('cookieConsent') === 'accepted'){
+    document.getElementById('cookieConsent').style.display = 'none';
+  }
+
+  // Al hacer clic en aceptar, guardar y ocultar
+  document.getElementById('acceptCookies').onclick = function(){
+    localStorage.setItem('cookieConsent', 'accepted');
+    document.getElementById('cookieConsent').style.display = 'none';
+  };
+</script>
 
 </body>
 </html>
