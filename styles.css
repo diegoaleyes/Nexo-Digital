@@ -1,37 +1,51 @@
 
 rgb(120, 183, 65);
-/* Loader visible por defecto */
-.loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+:root {
+  /* Colores primarios */
+  --primary-green: #78b741;
+  --primary-green-dark: #629530;
+  --dark-background: #141618;
+  --light-background: #f9fafb;
+
+  /* Texto */
+  --text-dark: #222;
+  --text-light: #cfd8dc;
+  --text-muted: #444;
+  --text-highlight: #a3d2ca;
+
+  /* Botones */
+  --btn-primary: #78b741;
+  --btn-primary-dark: #629530;
+  --btn-light-bg: #cfd3ce;
+  --btn-light-hover: #78b741;
+
+  /* Links */
+  --link-default: #444;
+  --link-hover: #78b741;
+
+  /* Fondos */
+  --dark-gradient: linear-gradient(135deg, #141618, #000428);
+  --topbar-gradient: linear-gradient(90deg, #003366, #0066cc);
+
+  /* Sombras */
+  --shadow-light: 0 2px 6px rgba(0, 0, 0, 0.05);
+  --shadow-heavy: 0 5px 15px rgba(0, 0, 0, 0.7);
 }
 
-/* Puedes agregar una animación, como un spinner */
-.loader::after {
-  content: "";
-  width: 50px;
-  height: 50px;
-  border: 6px solid #ccc;
-  border-top-color: #3498db;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+/* Reset básico */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-/* Cuando la página carga */
-body.loaded .loader {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
+rgb(120, 183, 65);
+
 
 @keyframes spin {
   to {
@@ -133,7 +147,7 @@ body.dark-mode header .logo img {
 header .logo span {
   font-weight: 700;
   font-size: 1.6rem;
-  color: #222;
+  color: #198935;
 }
 
 body.dark-mode header .logo span {
