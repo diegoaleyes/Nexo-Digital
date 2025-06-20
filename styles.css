@@ -874,8 +874,10 @@ footer {
   .hamburger {
     display: block;
   }
+  
 }
 @media (max-width: 775px) {
+  
 .topbar {
   display: none;
 
@@ -905,7 +907,10 @@ footer {
 
 @media (max-width: 775px) {
 
-
+#servicios {
+  display: flex;
+  flex-direction: column;
+}
 .info-card {
   display: flex;
   flex-direction: column;
@@ -935,6 +940,7 @@ footer {
   justify-content: center;
   flex-wrap: nowrap;
 }
+
 }
 
 
@@ -1065,6 +1071,10 @@ nav#mobile-menu.active {
 
   nav:not(#mobile-menu) {
     display: none; /* Oculta el menú de escritorio en móvil */
+  }
+  .services {
+    display: flex;
+    flex-direction: column;
   }
 }
 /* ... tu CSS existente ... */
