@@ -1,62 +1,50 @@
+// Loader al cargar la página
 window.addEventListener("load", () => {
   const loader = document.getElementById("loader");
-  loader.style.opacity = "0";
-  loader.style.visibility = "hidden";
-  loader.style.transition = "all 0.5s ease";
+  if (loader) {
+    loader.style.transition = "all 0.5s ease";
+    loader.style.opacity = "0";
+    loader.style.visibility = "hidden";
+  }
 });
 
+// Header sticky al hacer scroll
 const header = document.querySelector("header");
 window.addEventListener("scroll", () => {
   header.classList.toggle("sticky", window.scrollY > 50);
 });
+
+// Lógica principal una vez que el DOM está cargado
 window.addEventListener("DOMContentLoaded", () => {
+  // Activar modo oscuro automáticamente por la noche
   const hour = new Date().getHours();
   if (hour >= 20 || hour < 7) {
     document.body.classList.add("dark-mode");
   }
-});
-const text = "para Pymes y Autónomos";
-let index = 0;
-function type() {
+
+  // Efecto de tipeo
+  const text = "para Pymes y Autónomos";
   const el = document.getElementById("typed");
-  if (index < text.length) {
-    el.innerHTML += text.charAt(index);
-    index++;
-    setTimeout(type, 40);
+  if (el) {
+    let index = 0;
+    function type() {
+      if (index < text.length) {
+        el.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, 40);
+      }
+    }
+    type();
   }
-}
-window.addEventListener("DOMContentLoaded", type);
 
-const menuToggle = document.getElementById("menu-toggle");
-const menu = document.getElementById("menu");
+  // Menú hamburguesa
+  const hamburger = document.getElementById("hamburger");
+  const navbar = document.getElementById("navbar");
 
-let menuOpen = false;
-
-menuToggle.addEventListener("click", () => {
-  menu.classList.toggle("active");
-
-  // Cambiar icono hamburguesa a X
-  if (!menuOpen) {
-    menuToggle.innerHTML = "&times;";
-    menuOpen = true;
-  } else {
-    menuToggle.innerHTML = "&#9776;";
-    menuOpen = false;
+  if (hamburger && navbar) {
+    hamburger.addEventListener("click", () => {
+      navbar.classList.toggle("active");
+      hamburger.innerHTML = navbar.classList.contains("active") ? "&times;" : "☰";
+    });
   }
 });
-<script>
-  const hamburger = document.getElementById("hamburger");
-  const menu = document.getElementById("mobile-menu");
-  let menuAbierto = false;
-
-  hamburger.addEventListener("click", () => {
-    menu.classList.toggle("active");
-    if (!menuAbierto) {
-      hamburger.innerHTML = "&times;"; // Ícono X
-      menuAbierto = true;
-    } else {
-      hamburger.innerHTML = "☰"; // Ícono hamburguesa
-      menuAbierto = false;
-    }
-  });
-</script>

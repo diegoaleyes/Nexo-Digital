@@ -1018,7 +1018,7 @@ header {
 }
 
 /* Menú principal (modo móvil inicialmente oculto) */
-nav#mobile-menu {
+nav#navbar {
   position: fixed;
   top: 0;
   right: -100%;
@@ -1030,28 +1030,28 @@ nav#mobile-menu {
   padding-top: 5rem;
 }
 
-nav#mobile-menu ul {
+nav#navbar ul {
   list-style: none;
   text-align: center;
   padding: 0;
 }
 
-nav#mobile-menu ul li {
+nav#navbar ul li {
   margin: 25px 0;
 }
 
-nav#mobile-menu ul li a {
+nav#navbar ul li a {
   text-decoration: none;
   color: #333;
   font-size: 1.5rem;
   transition: color 0.3s ease;
 }
 
-nav#mobile-menu ul li a:hover {
+nav#navbar ul li a:hover {
   color: #4CAF50;
 }
 
-nav#mobile-menu.active {
+nav#navbar.active {
   right: 0;
 }
 
@@ -1061,15 +1061,15 @@ nav#mobile-menu.active {
     display: block;
   }
 
-  nav#mobile-menu {
+  nav#navbar {
     display: block;
   }
 
-  nav#mobile-menu ul li a {
+  nav#navbar ul li a {
     font-weight: bold;
   }
 
-  nav:not(#mobile-menu) {
+  nav:not(#navbar) {
     display: none; /* Oculta el menú de escritorio en móvil */
   }
   .services {
@@ -1094,3 +1094,18 @@ nav#mobile-menu.active {
 }
 /* === FIN DEL BLOQUE NUEVO === */
 
+#navbar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 75%;
+  height: 100%;
+  background-color: #fff;
+  transition: right 0.4s ease;
+  padding-top: 5rem;
+  z-index: 999;
+}
+
+#navbar.active {
+  right: 0;
+}
