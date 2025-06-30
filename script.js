@@ -1,50 +1,56 @@
-// Loader al cargar la página
-window.addEventListener("load", () => {
-  const loader = document.getElementById("loader");
-  if (loader) {
-    loader.style.transition = "all 0.5s ease";
-    loader.style.opacity = "0";
-    loader.style.visibility = "hidden";
-  }
+document.addEventListener('DOMContentLoaded', () => {
+  // Carrusel dinámico de fondo
+  const root = document.documentElement;
+  const fondoImgs = [
+    "url('./mac escritorio.jpg')",
+    "url('./seo madera.jpg')",
+    "url('./movil.jpg')"
+  ];
+  let current = 0;
+
+  // 👇 Establecer imagen inicial al cargar
+  root.style.setProperty('--img-url', fondoImgs[current]);
+
+  // 👇 Rotar imágenes cada 6 segundos
+  setInterval(() => {
+    current = (current + 1) % fondoImgs.length;
+    root.style.setProperty('--img-url', fondoImgs[current]);
+  }, 6000);
 });
+document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.hero__slider');
+  const images = [
+    './mac escritorio.jpg',
+    './movil.jpg'
+  ];
+  const imgElements = document.querySelectorAll('.slider-image');
 
-// Header sticky al hacer scroll
-const header = document.querySelector("header");
-window.addEventListener("scroll", () => {
-  header.classList.toggle("sticky", window.scrollY > 50);
+  let current = 0;
+  let next = 1;
+
+  // Inicial
+  imgElements[0].src = images[0];
+  imgElements[1].src = images[1];
+
+  setInterval(() => {
+    // Apaga el actual, enciende el siguiente
+    slides[current].style.opacity = 0;
+    slides[next].style.opacity = 1;
+
+    // Prepara la siguiente imagen en la capa oculta
+    const hidden = current;
+    current = next;
+    next = (next + 1) % images.length;
+    imgElements[hidden].src = images[next];
+  }, 8000);
 });
-
-// Lógica principal una vez que el DOM está cargado
-window.addEventListener("DOMContentLoaded", () => {
-  // Activar modo oscuro automáticamente por la noche
-  const hour = new Date().getHours();
-  if (hour >= 20 || hour < 7) {
-    document.body.classList.add("dark-mode");
-  }
-
-  // Efecto de tipeo
-  const text = "para Pymes y Autónomos";
-  const el = document.getElementById("typed");
-  if (el) {
-    let index = 0;
-    function type() {
-      if (index < text.length) {
-        el.innerHTML += text.charAt(index);
-        index++;
-        setTimeout(type, 40);
+document.querySelectorAll('.fade-in').forEach(el => {
+  new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
       }
-    }
-    type();
-  }
-
-  // Menú hamburguesa
-  const hamburger = document.getElementById("hamburger");
-  const navbar = document.getElementById("navbar");
-
-  if (hamburger && navbar) {
-    hamburger.addEventListener("click", () => {
-      navbar.classList.toggle("active");
-      hamburger.innerHTML = navbar.classList.contains("active") ? "&times;" : "☰";
     });
-  }
+  }, { threshold: 0.3 }).observe(el);
 });

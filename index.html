@@ -2,354 +2,177 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NexoDigital – Diseño Web para Pymes y Autónomos en Málaga</title>
-  <meta name="description" content="Webs modernas y asequibles en Málaga. Ofrecemos diseño, SEO local y soporte transparente. ¡Lanzamos tu negocio online!" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NexoDigital | Tu web profesional, sin complicaciones</title>
+  <meta name="description" content="Webs modernas y asequibles en Málaga. Diseño, SEO local, mantenimiento y soporte real." />
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- JS -->
   <script src="script.js" defer></script>
-  <link rel="canonical" href="https://www.nexodigital.com/" />
 </head>
+
 <body>
-
-  <!-- Loader -->
-  <div id="loader" class="loader"></div>
-
-  <!-- Barra superior -->
+  <!-- Topbar -->
   <div class="topbar">
-    <div>
+    <div class="topbar__left">
       <span>📞 +34 600 78 41 69</span>
+      <span class="topbar__sep">|</span>
       <a href="mailto:info@nexodigital.com">info@nexodigital.com</a>
     </div>
-    <div>
-      <a href="#" aria-label="Facebook"><img src="./icons8-facebook-logo-94.png" alt="Facebook" class="redes" /></a>
-      <a href="#" aria-label="Twitter"><img src="./icons8-twitter-50.png" alt="Twitter" class="redes" /></a>
-      <a href="#" aria-label="LinkedIn"><img src="./linkedin.png" alt="LinkedIn" class="redes" /></a>
-      <a href="#" aria-label="Instagram"><img src="./icons8-instagram-logo-94.png" alt="Instagram" class="redes" /></a>
+    <div class="topbar__right">
+      <a href="#" aria-label="Facebook"><img src="icons8-facebook-logo-94.png" alt="Facebook" /></a>
+      <a href="#" aria-label="Twitter"><img src="icons8-twitter-50.png" alt="Twitter" /></a>
+      <a href="#" aria-label="LinkedIn"><img src="linkedin.png" alt="LinkedIn" /></a>
+      <a href="#" aria-label="Instagram"><img src="icons8-instagram-logo-94.png" alt="Instagram" /></a>
     </div>
   </div>
 
-  <!-- Encabezado con menú -->
-  <header>
-    <div class="logo">
-      <img src="./WhatsApp Image 2025-06-19 at 18.35.24.jpeg" alt="NexoDigital Logo Diseño Web Málaga" />
-      <span>NexoDigital</span>
+  <!-- NAVBAR: ahora justo debajo de topbar -->
+  <nav class="navbar">
+    <a href="#" class="logo">
+      <img src="./cubo metalico nexo digital.png" alt="NexoDigital Logo" />
+      <span class="texto-metal">Nexo Digital</span>
+    </a>
+    <ul class="nav__list">
+      <li><a href="#" class="nav__link active">Home</a></li>
+      <li><a href="#servicios" class="nav__link">Servicios</a></li>
+      <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
+      <li><a href="#blog" class="nav__link">Blog</a></li>
+      <li><a href="#contacto" class="nav__link">Contacto</a></li>
+    </ul>
+    <button class="nav__toggle" aria-label="Menú">☰</button>
+  </nav>
+
+  <header class="hero">
+    <div class="hero__slider">
+      <div class="overlay"></div>
+      <img src="./mac escritorio.jpg" alt="Hero background" class="slider-image">
     </div>
-    <nav>
-      <ul id="nav-list">
-        <li><a href="#" class="active">HOME</a></li>
-        <li><a href="#servicios">SERVICIOS</a></li>
-        <li><a href="#proyectos">PROYECTOS</a></li>
-        <li><a href="#blog">BLOG</a></li>
-        <li><a href="#contacto">CONTACTO</a></li>
-      </ul>
-    </nav>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <div class="hero__slider hero__slider--alt">
+      <div class="overlay"></div>
+      <img src="./ordenador backdark.jpg" alt="Hero background" class="slider-image">
+    </div>
+
+    <div class="hero__content container">
+      <h1 class="fade-in">Tu web profesional, sin complicaciones</h1>
+      <p class="fade-in">Diseños modernos, soporte humano y precios que sí entienden las pymes</p>
+      <a href="#servicios" class="btn btn--primary fade-in visible">Nuestros Servicios</a>
+    </div>
   </header>
 
-  <!-- Slider principal -->
-  <section class="slider">
-    <div class="content">
-      <h1>Tu web profesional, sin complicaciones</h1>
-      <p>Diseños modernos, soporte humano y precios que sí entienden las pymes</p>
-      <a href="#servicios" class="btn-primary">Nuestros Servicios</a>
+  <main>
+    <!-- SECCIÓN 1: Sobre Nosotros -->
+   <section class="section diagonal-bottom sobre-nosotros">
+  <div class="container sobre-nosotros__contenido">
+    <div class="sobre-nosotros__texto">
+      <h2>Mucho más que diseño web</h2>
+      <p>Entendemos tu negocio, hablamos tu idioma y te acompañamos de principio a fin.</p>
+      <p>En NexoDigital ayudamos a <strong>pequeños negocios y autónomos</strong> a dar el salto al mundo online de forma profesional, cercana y sin complicaciones.</p>
+      <p>No somos una gran agencia. Somos especialistas en pymes, con más de <strong>15 años de experiencia comercial</strong> asesorando a negocios reales en Málaga. Sabemos lo que tu empresa necesita porque <strong>hablamos tu mismo idioma</strong>.</p>
+      <p>Te acompañamos de principio a fin: desde definir objetivos, elegir el diseño correcto, posicionar tu web en Google, hasta darte soporte cuando más lo necesites.</p>
+      <p><em>Diseñamos webs que no solo se ven bien, sino que funcionan y venden.</em></p>
     </div>
-  </section>
 
-  <!-- CONTINÚA el resto del contenido como lo compartiste... -->
-
-
-<!-- Sección: Quiénes Somos -->
-<main class="main-content">
-  <div class="info-card">
-   <section class="info">
-  <h2>Mucho más que diseño web. Entendemos tu negocio.</h2>
-  <p>En NexoDigital ayudamos a <strong>pequeños negocios y autónomos</strong> a dar el salto al mundo online de forma profesional, cercana y sin complicaciones.</p>
-  <p>No somos una gran agencia. Somos especialistas en pymes, con más de <strong>15 años de experiencia comercial</strong> asesorando a negocios reales en Málaga. Sabemos lo que tu empresa necesita porque <strong>hablamos tu mismo idioma</strong>.</p>
-  <p>Te acompañamos de principio a fin: desde definir objetivos, elegir el diseño correcto, posicionar tu web en Google, hasta darte soporte cuando más lo necesites.</p>
-  <p><em>Diseñamos webs que no solo se ven bien, sino que funcionan y venden.</em></p>
+    <div class="sobre-nosotros__card fade-in">
+      <img src="./analysis.png" alt="Tecnologías utilizadas" />
+      <h3>Tecnología + Estrategia</h3>
+      <p>Herramientas modernas, resultados visibles. Creamos tu web con foco en conversión.</p>
+    </div>
+  </div>
 </section>
 
-    <section class="tech-icons">
-      <img src="./analysis.png" alt="Tecnologías utilizadas para diseño web en Málaga" />
+
+    <!-- Servicios -->
+    <section id="servicios" class="section servicios diagonal-top diagonal-bottom fade-in">
+      <h2 class="section__title">Servicios para hacer crecer tu negocio</h2>
+      <div class="grid servicios__grid">
+        <div class="card service-card">
+          <img src="analysis.png" alt="Diseño Web Responsive" class="service-card__icon">
+          <h3 class="service-card__title">Diseño Web Responsive</h3>
+          <p class="service-card__text">Tu web se verá perfecta en móvil, tablet o PC. Rápida y clara.</p>
+        </div>
+        <div class="card service-card">
+          <img src="seo.png" alt="SEO Local" class="service-card__icon">
+          <h3 class="service-card__title">SEO Local</h3>
+          <p class="service-card__text">Aparece en Google cuando te buscan en Málaga. Más visitas, más ventas.</p>
+        </div>
+        <div class="card service-card">
+          <img src="mantenimiento.png" alt="Mantenimiento" class="service-card__icon">
+          <h3 class="service-card__title">Mantenimiento & Soporte</h3>
+          <p class="service-card__text">Actualizaciones, seguridad y ayuda continua para que tu web siempre funcione.</p>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="#contacto" class="btn btn--secondary">Quiero mi presupuesto</a>
+      </div>
     </section>
-  </div>
 
-  <!-- Servicios -->
- <section id="servicios" class="info">
-  <h2>Servicios pensados para hacer crecer tu negocio</h2>
-  
-  <div class="services">
-    
-    <div class="service-card">
-      <div class="service-icon"><img src="./analysis.png" class="service-icon" alt=""></div>
-      <h3>Diseño Web Responsive</h3>
-      <p>Tu web se verá perfecta en móvil, tablet o PC. Rápida, clara y diseñada para que tus clientes encuentren lo que buscan sin perder tiempo.</p>
-    </div>
-    
-    <div class="service-card">
-      <div class="service-icon"><img src="./seo.png" class="service-icon" alt=""></div>
-      <h3>SEO Local</h3>
-      <p>Te ayudamos a aparecer en Google cuando te buscan en Málaga. Más visibilidad = más visitas, más ventas y más confianza.</p>
-    </div>
-    
-    <div class="service-card">
-      <div class="service-icon"><img src="./mantenimiento.png" class="service-icon" alt=""></div>
-      <h3>Mantenimiento y Actualización</h3>
-      <p>Nos encargamos de todo lo técnico. Para que vos te enfoques en tu negocio, sabiendo que tu web siempre estará al día y funcionando al 100 %.</p>
-    </div>
+    <!-- Proyectos -->
+    <section id="proyectos" class="section proyectos fade-in">
+      <h2 class="section__title">Casos Reales de Pymes en Málaga</h2>
+      <p class="section__subtitle">Proyectos adaptados a cada cliente y presupuesto.</p>
+      <div class="grid galeria">
+        <img src="pizzeria dieci.png" alt="Pizzería Dieci">
+        <img src="cafe grid.png" alt="Café Grid">
+        <img src="naranja tablet.jpg" alt="Landing Profesional">
+      </div>
+    </section>
 
-  </div>
-
-  <div style="text-align: center; margin-top: 30px;">
-    <a href="#contacto" class="btn-primary">Quiero mi presupuesto</a>
-  </div>
-</section>
-
-  <!-- Proyectos -->
-  <section id="proyectos" class="info">
-    <h2>Casos Reales de Webs para Pymes en Málaga</h2>
-    <p>Descubre ejemplos de páginas web desarrolladas para comercios, profesionales y <strong>autónomos malagueños</strong>. Resultados reales y adaptados al presupuesto de cada cliente.</p>
-    <h2>Algunos trabajos recientes</h2>
-    <div class="galeria">
-      <img src="./pizzeria dieci.png" alt="Proyecto web para negocio local" class="webs" />
-      <img src="./cafe grid.png" alt="Diseño para cafetería artesanal" class="webs" />
-      <img src="./naranja tablet.jpg" alt="Landing page para profesional independiente" class="proyectos" />
-    </div>
-  </section>
-
-  <!-- Blog -->
-  <section id="blog" class="info">
-    <div class="blog">
-      <h2>Blog: Consejos y Recursos para Digitalizar tu Negocio</h2>
-      <article class="blog-post">
-  <h3>¿No accediste al Kit Digital o terminaste decepcionado?</h3>
-
-  <div class="preview">
-    <p>Muchos negocios en Málaga escucharon hablar del Kit Digital. Algunos lo aprovecharon, otros quedaron afuera. Y hay quienes sí lo obtuvieron… pero se llevaron un sabor amargo.</p>
-    <button class="btn-primary" onclick="toggleContent(this)">Leer más</button>
-  </div>
-
-  <div class="full-content" style="display: none; margin-top: 15px;">
-    <h4>Te cuento qué opciones reales tenés hoy</h4>
-    <p>Webs genéricas, atención casi nula, y la sensación de que simplemente “les hicieron algo” y se olvidaron. Si te pasó, este mensaje es para vos.</p>
-
-    <h4>¿Qué fue exactamente el Kit Digital?</h4>
-    <p>Fue una ayuda económica del Gobierno destinada a digitalizar pymes y autónomos. En teoría, una gran idea. En la práctica, muchos quedaron sin acceso por requisitos difíciles de cumplir. Y a los que sí accedieron, les quedó la factura del 21 % de IVA de una web que muchas veces no sienten suya.</p>
-
-    <h4>¿Y ahora qué?</h4>
-    <p>Si no accediste o si sentís que lo que te entregaron no representa a tu negocio, no te preocupes. Hay otras formas de tener una web profesional, humana y sobre todo útil. No necesitás una subvención para dar un salto digital. Necesitás alguien que te escuche y entienda tu rubro.</p>
-
-    <h4>¿Qué te ofrezco yo?</h4>
-    <p>Soy Diego, asesor comercial desde hace más de 15 años y desarrollador web. Conozco de cerca cómo trabajan las pymes: sé que el presupuesto es justo, que el tiempo escasea y que necesitás soluciones, no excusas. Por eso creo webs con cariño, claridad y visión de negocio.</p>
-
-    <p>No te prometo que tu web vaya a vender por sí sola —nadie honesto debería hacerlo— pero sí te aseguro que vas a tener una web que:</p>
-    <ul>
-      <li>Refleja la identidad de tu negocio</li>
-      <li>Se adapta a todos los dispositivos</li>
-      <li>Está optimizada para encontrarte en Google</li>
-      <li>Y que va acompañada de soporte real y humano</li>
-    </ul>
-
-    <p><strong>¿Querés hablarlo?</strong></p>
-    <p>Escribime sin compromiso. En 24 horas podés tener una propuesta clara, realista y hecha a medida de tu negocio. Porque aunque no tengas Kit Digital, tenés algo más importante: decisión.</p>
-
-    <div style="text-align:center; margin-top: 20px;">
-      <a href="#contacto" class="btn-primary">Hablemos sin compromiso</a>
-    </div>
-  </div>
-</article>
-
-<script>
-  function toggleContent(button) {
-    const fullContent = button.parentElement.nextElementSibling;
-    const isVisible = fullContent.style.display === 'block';
-    fullContent.style.display = isVisible ? 'none' : 'block';
-    button.textContent = isVisible ? 'Leer más' : 'Leer menos';
-  }
-</script>
-
-
-     <article class="blog-post">
-  <h3>¿Qué es el SEO Local y por qué puede cambiar tu negocio en Google?</h3>
-
-  <div class="preview">
-    <p>¿Sabías que tu negocio puede aparecer en Google cuando alguien busca “cafetería cerca” o “fontanero en Mijas”? Eso es SEO Local. Y no, no necesitas pagar anuncios para lograrlo.</p>
-    <button class="btn-primary" onclick="toggleContent(this)">Leer más</button>
-  </div>
-
-  <div class="full-content" style="display: none; margin-top: 15px;">
-    <h4>¿Qué es el SEO Local?</h4>
-    <p>Es una estrategia para que tu negocio aparezca en los primeros resultados de Google cuando alguien busca un producto o servicio en una zona específica. Ejemplo: “peluquería en Málaga” o “diseñador web cerca de mí”.</p>
-    <p>Muchas veces, esos resultados incluyen el mapa con ubicaciones, horarios, opiniones y hasta el botón para llamar directamente. Ahí es donde tu negocio debería estar.</p>
-
-    <h4>¿Por qué es tan importante?</h4>
-    <p>Porque la mayoría de tus futuros clientes no buscan por redes sociales. Buscan en Google. Y si estás bien posicionado, estás ganando visibilidad real en tu zona. Si no, lo está haciendo tu competencia.</p>
-
-    <h4>¿Qué factores ayudan al SEO Local?</h4>
-    <ul>
-      <li>Una web optimizada con tu ciudad o zona como palabra clave</li>
-      <li>Ficha de Google Business bien configurada y actualizada</li>
-      <li>Buenas reseñas de clientes reales</li>
-      <li>Contenido enfocado en tu sector y en tu ciudad</li>
-      <li>Enlaces desde páginas o medios locales</li>
-    </ul>
-
-    <h4>¿Cómo lo trabajo yo en los sitios que desarrollo?</h4>
-    <p>Cuando creo tu web, no solo pienso en lo visual. Me enfoco en que cargue rápido, sea clara para Google y transmita confianza. Uso técnicas de SEO Local como:</p>
-    <ul>
-      <li>Etiquetas HTML claras (títulos, descripciones, keywords)</li>
-      <li>Integración con mapas, contacto y redes locales</li>
-      <li>Textos que hablen de tu zona, tu rubro y tu público</li>
-    </ul>
-
-    <p>Todo eso ayuda a que cuando alguien en tu ciudad busque lo que ofrecés… te encuentre a vos primero.</p>
-
-    <h4>¿Querés que tu negocio también aparezca?</h4>
-    <p>No se trata de magia. Se trata de hacerlo bien. Si querés posicionarte localmente con una web profesional y pensada para tu negocio, escribime. Sin compromiso. Lo hablamos.</p>
-
-    <div style="text-align:center; margin-top: 20px;">
-      <a href="#contacto" class="btn-primary">Quiero mejorar mi visibilidad</a>
-    </div>
-  </div>
-</article>
-
-<script>
-  function toggleContent(button) {
-    const fullContent = button.parentElement.nextElementSibling;
-    const isVisible = fullContent.style.display === 'block';
-    fullContent.style.display = isVisible ? 'none' : 'block';
-    button.textContent = isVisible ? 'Leer más' : 'Leer menos';
-  }
-</script>
-
-      <article>
-        <h3>Diseño web barato en Málaga: ¿qué incluye y qué evitar?</h3>
-        <p>Todo lo que debes saber antes de contratar una <strong>página web económica en Málaga</strong>. Lo bueno, lo malo y lo imprescindible.</p>
-        <a href="#">Leer más</a>
+    <!-- Blog -->
+    <section id="blog" class="section blog fade-in">
+      <h2 class="section__title">Blog: Consejos y Recursos</h2>
+      <article class="card blog-post">
+        <h3 class="blog-post__title">¿No accediste al Kit Digital?</h3>
+        <div class="blog-post__preview">
+          <p>Muchos negocios en Málaga oyeron del Kit Digital… y se llevaron un chasco.</p>
+          <button class="btn-toggle">Leer más</button>
+        </div>
+        <div class="blog-post__full">
+          <h4>¿Y ahora qué?</h4>
+          <p>Hay otras formas de tener una web profesional y útil sin subvenciones.</p>
+          <a href="#contacto" class="btn btn--primary">Hablemos sin compromiso</a>
+        </div>
       </article>
-    </div>
-  </section>
-</main>
+      <article class="card blog-post">
+        <h3 class="blog-post__title">¿Qué es el SEO Local?</h3>
+        <div class="blog-post__preview">
+          <p>Tu negocio puede aparecer en Google cuando buscan “cafetería Málaga”.</p>
+          <button class="btn-toggle">Leer más</button>
+        </div>
+        <div class="blog-post__full">
+          <p>El SEO Local te posiciona en búsquedas de tu zona y compite con éxito.</p>
+          <a href="#contacto" class="btn btn--primary">Quiero posicionarme</a>
+        </div>
+      </article>
+    </section>
 
-<!-- Contacto -->
-<section id="contacto" class="info">
-  
+    <!-- Contacto -->
+    <section id="contacto" class="section contacto fade-in">
+      <h2 class="section__title">Contáctanos</h2>
+      <form class="contact-form">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu email" required>
+        <textarea name="mensaje" rows="5" placeholder="Tu mensaje"></textarea>
+        <button type="submit" class="btn btn--primary">Enviar Mensaje</button>
+      </form>
+    </section>
+  </main>
 
-  <h2>Contáctanos: Diseño Web en Málaga</h2>
-  <p>Tu negocio merece una web profesional. Contáctanos y en 24 h te enviamos una propuesta clara, sin compromiso.</p>
+  <!--
 
-  <form id="contact-form" name="contact-form"   class="contact-form">
-    <input type="text" name="nombre" placeholder="Tu nombre" required />
-    <input type="email" name="email" placeholder="Tu correo electrónico" required />
-    <textarea name="mensaje" placeholder="Cuéntanos tu idea o consulta..." required></textarea>
-   <button type="submit" class="btn-primary bubble-btn">Enviar mensaje</button>
-
-    <p id="form-status" class="form-status"></p>
-  </form>
-</section>
-
-<!-- Footer -->
-<footer>
-  <p>© 2025 NexoDigital. Diseño web en Málaga. Todos los derechos reservados. <a href="mailto:info@nexodigital.com">info@nexodigital.com</a></p>
-</footer>
-
-<!-- WhatsApp -->
-<a href="https://wa.me/34600784169" class="whatsapp-btn" aria-label="WhatsApp NexoDigital Málaga">
-  <img src="./icons8-whatsapp-24.png" alt="Whatsapp-btn">
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 NexoDigital. Todos los derechos reservados.</p>
+  </footer>
+<a href="https://wa.me/34600784169" class="whatsapp-float" target="_blank" aria-label="Chatear por WhatsApp">
+  <img src="./icons8-whatsapp-24.png" alt="WhatsApp" />
 </a>
-
-<!-- Scripts -->
-<script>
-  const toggleBtn = document.getElementById('darkModeToggle');
-  toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️ día/noche' : '🌗 día/noche';
-  });
-</script>
-
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  emailjs.init("yY6EadVSGVV3RC-R9"); // ← SOLO la clave pública
-
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const status = document.getElementById('form-status');
-    emailjs.sendForm('service_ba3pyxw', 'template_ob46l7k', this)
-      .then(() => {
-        status.textContent = "✅ Mensaje enviado correctamente.";
-        this.reset();
-      }, (error) => {
-        status.textContent = "❌ Error al enviar. Inténtalo más tarde.";
-        console.error(error);
-      });
-  });
-</script>
-
-<script src="https://unpkg.com/scrollreveal"></script>
-<script>
-  ScrollReveal().reveal('.service-card, .info-card, .galeria img, .blog article, .contact-form', {
-    duration: 1000,
-    distance: '40px',
-    easing: 'ease-out',
-    origin: 'bottom',
-    interval: 100
-  });
-</script>
-
-<script>
-  function toggleMenu() {
-    const nav = document.querySelector("nav ul");
-    nav.classList.toggle("show");
-  }
-</script>
-<!-- Aviso Cookies -->
-<div id="cookieConsent" style="
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  max-width: 400px;
-  background: #628264;
-  color: #eee;
-  padding: 15px 20px;
-  border-radius: 8px;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  box-shadow: 0 4px 8px rgba(134, 206, 162, 0.2);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 9999;
-  ">
-  <div style="flex: 1; margin-right: 15px;">
-    En esta Web No usamos cookies propias ni de terceros.
-    Consulta nuestra <a href="/privacidad" style="color: #1f8322; text-decoration: underline;">Política de Privacidad</a>.
-  </div>
-  <button id="acceptCookies" style="
-    background: #87e6ad;
-    border: none;
-    color: #313830;
-    font-weight: bold;
-    padding: 8px 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    ">
-    Aceptar
-  </button>
-</div>
-
-<script>
-  // Si ya aceptó, ocultar el banner
-  if(localStorage.getItem('cookieConsent') === 'accepted'){
-    document.getElementById('cookieConsent').style.display = 'none';
-  }
-
-  // Al hacer clic en aceptar, guardar y ocultar
-  document.getElementById('acceptCookies').onclick = function(){
-    localStorage.setItem('cookieConsent', 'accepted');
-    document.getElementById('cookieConsent').style.display = 'none';
-  };
-</script>
 
 </body>
 </html>
