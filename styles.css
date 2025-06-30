@@ -38,7 +38,8 @@
 body {
   font-family: var(--font-base);
   color: var(--text-muted);
-  background: #fff;
+  background: var(--bg-dark);
+  
   overflow-x: hidden;
 }
 
@@ -60,6 +61,7 @@ h1,h2,h3,h4 { margin-bottom:.5rem; }
   color: #e0e0e0;
   display:flex; justify-content:space-between;
   padding:.5rem 0; font-size:.9rem;
+  margin: 0 2rem;
 }
 .topbar__left,
 .topbar__right { display:flex; align-items:center }
@@ -116,7 +118,9 @@ h1,h2,h3,h4 { margin-bottom:.5rem; }
 /* Links */
 .nav__list {
   list-style:none;
-  display:flex; gap:2rem;
+  display:flex;
+   gap:2rem;
+   transition: max-height 0.4s ease-in-out;
 }
 .nav__link {
   color:var(--metallic-gray); text-decoration:none; font-weight:500;
@@ -394,6 +398,7 @@ h1,h2,h3,h4 { margin-bottom:.5rem; }
   list-style: none;
   display: flex;
   gap: 2rem;
+  transition: max-height 0.4s ease-in-out;
 }
 .nav__link {
   color: var(--text-light);
@@ -562,22 +567,7 @@ filter: brightness(1.2) contrast(1.1);
   overflow: hidden;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: 
-    linear-gradient(145deg, rgba(10, 17, 40, 0.5), rgba(0, 31, 63, 0.6)),
-    var(--img-url);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.5;
-  z-index: 1;
-  transition: background-image 1s ease-in-out;
-}
-
-
+.
 .hero__content {
   position: relative;
   z-index: 2;
@@ -689,9 +679,7 @@ filter: brightness(1.2) contrast(1.1);
   position: relative;
   z-index: 2;
 }
-.hero::before {
-  display: none;
-}
+
 .hero__slider {
   position: absolute;
   inset: 0;
@@ -988,3 +976,135 @@ filter: brightness(1.2) contrast(1.1);
     transform: translateY(0);
   }
 }
+/* ─── Botón hamburguesa ───────────────────── */
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1002;
+}
+.nav__toggle span {
+  display: block;
+  height: 3px;
+  background: var(--text-light);
+  border-radius: 2px;
+  transition: transform .3s ease, opacity .3s ease;
+}
+.nav__toggle.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.nav__toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav__toggle.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* ─── Menu desplegable en móvil ───────────── */
+@media (max-width: 768px) {
+  .nav__toggle {
+    display: flex;
+  }
+  .nav__list {
+    display: flex;
+    gap: 2rem;
+    transition: max-height 0.4s ease-in-out;
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    background: var(--bg-dark);
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .4s ease-in-out;
+    z-index: 1001;
+  }
+  .nav__list.open {
+    max-height: 500px; /* suficiente para tus ítems */
+  }
+  .nav__list li {
+    margin: 1rem 0;
+  }
+
+  /* Secciones en columna + tarjetas grandes */
+  .sobre-nosotros__contenido,
+  #servicios .servicios__grid,
+  .proyectos .galeria {
+    flex-direction: column !important;
+    align-items: center;
+  }
+  .sobre-nosotros__card,
+  .service-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+/* Solo en móvil: colapsado por defecto */
+@media (max-width: 768px) {
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+    background: var(--bg-dark);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 1000;
+  }
+
+  .nav__list.open {
+    max-height: 500px;
+  }
+}
+/* ─── Menú hamburguesa ───────────────────── */
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px; height: 22px;
+  background: none; border: none;
+  cursor: pointer; z-index: 1002;
+}
+.nav__toggle span {
+  display: block; height: 3px;
+  background: var(--text-light);
+  border-radius: 2px;
+  transition: transform .3s ease, opacity .3s ease;
+}
+.nav__toggle.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.nav__toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav__toggle.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .nav__toggle { display: flex; }
+
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--bg-dark);
+    max-height: 0; overflow: hidden;
+    transition: max-height .4s ease-in-out;
+    z-index: 1001;
+  }
+  .nav__list.open {
+    max-height: 500px;
+  }
+  .nav__list li { margin: 1rem 0; }
+}
+
