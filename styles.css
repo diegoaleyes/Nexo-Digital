@@ -5,7 +5,7 @@
   /* Paleta */
 
   --img-url: url('./mac escritorio.jpg');
-
+  --cardverdementa-gradient: linear-gradient(135deg, #25D366, #e0e0e0);
   --menta-verde:#25D366;
   --primary-green: #25D366;
   --primary-green-dark: #1eb050;
@@ -240,11 +240,14 @@ h1,h2,h3,h4 { margin-bottom:.5rem; }
 .galeria img:hover { transform:scale(1.03) }
 
 /* Blog */
+
 .blog-post {
+
   background:#fff; padding:2rem;
   border-radius:8px; box-shadow:var(--shadow-light);
   text-align:left; position:relative;
 }
+
 .blog-post__full { display:none; margin-top:1rem }
 .btn-toggle {
   background:none; border:2px solid var(--primary-green);
@@ -274,6 +277,10 @@ h1,h2,h3,h4 { margin-bottom:.5rem; }
   background:var(--dark-bg); color:#aaa;
   text-align:center; padding:2rem 0;
   font-size:.9rem;
+}
+.footer img {
+  height: 100px;
+  width: 100px;
 }
 
 /* ───────────────────────────
@@ -725,25 +732,43 @@ filter: brightness(1.2) contrast(1.1);
   position: fixed;
   bottom: 24px;
   right: 24px;
-  width: 64px;
-  height: 64px;
-  background-color: #25D366;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #25D366, #128C7E);
   border-radius: 50%;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  z-index: 999;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
+  animation: floatIn 0.6s ease-out both;
 }
+
 .whatsapp-float:hover {
-  transform: scale(1.08);
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
 }
-.whatsapp-float img {
-  width: 28px;
-  height: 28px;
-  filter: brightness(0) invert(1); /* convierte el icono en blanco */
+
+.whatsapp-icon {
+  width: 36px;
+  height: 36px;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover .whatsapp-icon {
+  transform: scale(1.1);
+}
+
+@keyframes floatIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .sobre-nosotros__contenido {
@@ -1108,3 +1133,185 @@ filter: brightness(1.2) contrast(1.1);
   .nav__list li { margin: 1rem 0; }
 }
 
+.proyectos-swiper {
+  padding: 3rem 0;
+  background: #121212; /* mismo tono oscuro del sitio */
+  border-top: 4px solid #00d0841a; /* suave borde verde */
+  border-bottom: 4px solid #00d0841a;
+}
+
+.proyectos-swiper img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.proyectos-swiper img:hover {
+  transform: scale(1.03);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #00d084;
+  transition: opacity 0.3s;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  opacity: 0.7;
+}
+.proyectos-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 320px; /* ajustable a gusto */
+  
+  background-color: #1b1b1b; /* para uniformidad si las imágenes tienen fondos distintos */
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.proyectos-swiper .swiper-slide img {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.proyecto-card {
+  position: relative;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--menta-verde);
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.proyecto-card img {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.proyecto-card:hover img {
+  transform: scale(1.05);
+}
+
+.overlay-card {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: #fff;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.proyecto-card:hover .overlay-card {
+  opacity: 1;
+}
+
+
+/* BLOG  */
+
+.blog__grid {
+  linear-gradient(135deg, #25D366, #e0e0e0);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.blog-post {
+  background: var(--cardverdementa-gradient);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: transform 0.3s;
+}
+
+.blog-post:hover {
+  transform: translateY(-4px);
+}
+
+
+.blog-post img {
+   
+  width: 50px;
+  height: 25px;
+  size-adjust: cover;
+}
+
+.blog-post__content {
+  padding: 1.2rem;
+  position: relative;
+}
+
+.blog-post__title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--bg-dark);
+}
+
+.blog-post__preview {
+  color: var(--bg-dark);
+  margin-bottom: 0.8rem;
+}
+
+.blog-post__full {
+  display: none;
+  color: #eee;
+  margin-top: 0.8rem;
+}
+
+.blog-post.active .blog-post__full {
+  display: block;
+}
+
+.btn-toggle {
+  background: none;
+  border: none;
+  color: var(--text-gray);
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+}
+/* leer mas en btn blog */
+
+.blog-post__full {
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.blog-post.active .blog-post__full {
+  display: block;
+  margin-top: 1rem;
+}
+#blog.section {
+  padding-bottom: 6rem; /* o más si necesitás */
+  position: relative;
+  z-index: 1;
+}
+
+/* separador secciones. ponerlo antes de la siguiente seccion, luego de la seccion que finaliza */
+
+.separador-svg {
+  width: 100%;
+  height: 100px;
+  line-height: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.separador-svg svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
