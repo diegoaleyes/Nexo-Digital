@@ -508,6 +508,7 @@ p {
 .sobre-nosotros__card {
   text-align: center;
   padding: 2rem 1rem;
+  
 }
 
 .sobre-nosotros__card img {
@@ -589,7 +590,7 @@ p {
 
 .blog-post {
   text-align: left;
-  background: linear-gradient(to bottom, var(--menta-verde), #ffffff); /* Verde menta a blanco */
+  background: linear-gradient(to bottom, var(--menta-verde), rgb(171, 227, 171));
   color: var(--text-light);
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Sombra elegante */
@@ -1391,7 +1392,7 @@ p {
   flex: 1;
   min-width: 280px;
   max-width: 360px;
-  background-color: #ffffff;
+  background: linear-gradient(to bottom, var(--menta-verde), rgb(171, 227, 171));
   border-radius: 12px;
   padding: 1rem;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);

@@ -220,7 +220,7 @@ h1,h2,h3,h4 { margin-bottom:.5rem; }
 .service-card {
   margin-left: 2rem;
   width: 90%;
-  background: var(--green-dark);
+  background: var(--menta-verde);
   color:var(--metallic-gray); padding:2rem 1rem;
   border-radius:12px; box-shadow:var(--shadow-light);
   transition:var(--transition);
