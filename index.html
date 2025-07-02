@@ -73,7 +73,7 @@
 
   <main>
     <!-- SECCIÓN 1: Sobre Nosotros -->
-   <section class="section diagonal-bottom sobre-nosotros section-enter curve-transition">
+   <section id="sobre-nosotros" class="section diagonal-bottom sobre-nosotros section-enter curve-transition">
       <div class="container sobre-nosotros__contenido">
         <div class="sobre-nosotros__texto">
           <h2>Mucho más que diseño web</h2>
@@ -93,7 +93,7 @@
     </section>
 
     <!-- Servicios -->
-    <section id="servicios" class="section servicios diagonal-top diagonal-bottom fade-insection section-enter servicios fade-transition">
+    <section id="servicios" class="section servicios diagonal-smooth wave-transition"">
       <h2 class="section__title">Servicios para hacer crecer tu negocio</h2>
       <div class="grid servicios__grid">
         <div class="card service-card">
@@ -115,10 +115,16 @@
       <div class="text-center">
         <a href="#contacto" class="btn btn--primary">Quiero mi presupuesto</a>
       </div>
+      <div class="svg-separator svg-separator--dark">
+  <svg viewBox="0 0 1200 100" preserveAspectRatio="none">
+    <path d="M0,0 C300,100 900,0 1200,100 L1200,0 L0,0 Z" fill="#0a1128"/>
+  </svg>
+</div>
+
     </section>
 
     <!-- Proyectos -->
-    <section id="proyectos" class="section proyectos fade-in section section-enter proyectos diagonal-smooth">
+    <section id="proyectos" class="section proyectos diagonal-smooth curve-transition">
       <h2 class="section__title">Casos Reales de Pymes en Málaga</h2>
       <p class="section__subtitle">Proyectos adaptados a cada cliente y presupuesto.</p>
       <div class="swiper proyectos-swiper">
@@ -137,10 +143,16 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
       </div>
+      <div class="svg-separator svg-separator--light">
+  <svg viewBox="0 0 1200 100" preserveAspectRatio="none">
+    <path d="M0,0 C300,100 900,0 1200,100 L1200,0 L0,0 Z" fill="#fff"/>
+  </svg>
+</div>
+
     </section>
 
     <!-- Seccion Blog -->
-    <section id="blog" class="section blog diagonal-top diagonal-bottom fade-in section section-enter blog clip-transition">
+    <section id="blog" class="section blog diagonal-smooth wave-transition">
       <h2 class="section__title">Blog: Consejos y Recursos</h2>
       <div class="grid blog__grid">
         
@@ -157,6 +169,33 @@
             </div>
           </div>
         </article>
+        <article class="card blog-post">
+  <img src="./desarrollo web.png" alt="Diseño Web Málaga">
+  <div class="blog-post__content">
+    <h3 class="blog-post__title">¿Cómo elegir la mejor agencia de diseño web en Málaga?</h3>
+    <p class="blog-post__preview">¿Tu negocio necesita una web que realmente funcione? En Málaga hay muchas agencias, pero pocas entienden lo que tu empresa necesita para destacar online. Aquí te contamos cómo elegir con criterio y evitar errores comunes.</p>
+    <button class="btn-toggle">Leer más</button>
+    <div class="blog-post__full">
+      <h4>Tu web, tu escaparate digital</h4>
+      <p>Una agencia profesional puede ayudarte a crear una web funcional, atractiva y optimizada para SEO. Busca experiencia local, diseño responsive, y una estrategia clara de posicionamiento. En Nexo Digital combinamos creatividad con resultados medibles.</p>
+      <a href="#contacto" class="btn btn--primary">Solicita asesoría gratuita</a>
+    </div>
+  </div>
+</article>
+
+       <article class="card blog-post">
+  <img src="./tendencias.png" alt="Tendencias Diseño Web">
+  <div class="blog-post__content">
+    <h3 class="blog-post__title">Tendencias en diseño web 2025 para negocios en Málaga</h3>
+    <p class="blog-post__preview">¿Tu web está lista para lo que viene? En 2025, el diseño web evoluciona hacia la inteligencia artificial, la accesibilidad y la velocidad. Si tienes un negocio en Málaga, estas tendencias pueden marcar la diferencia entre destacar o desaparecer.</p>
+    <button class="btn-toggle">Leer más</button>
+    <div class="blog-post__full">
+      <h4>Diseño que convierte</h4>
+      <p>Desde interfaces por voz hasta minimalismo funcional, el diseño web moderno se centra en la experiencia del usuario. En Nexo Digital aplicamos las últimas tendencias para que tu web no solo se vea bien, sino que también venda.</p>
+      <a href="#contacto" class="btn btn--primary">Actualiza tu web hoy</a>
+    </div>
+  </div>
+</article>
 
         <article class="card blog-post">
           <img src="./seo.png" alt="Blog SEO Local">
