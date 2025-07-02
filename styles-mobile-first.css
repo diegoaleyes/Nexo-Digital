@@ -167,15 +167,15 @@ p {
 }
 
 .logo img {
-  width: 32px;
-  height: 32px;
+  width: 50px;
+  height: 50px;
   margin-right: 0.5rem;
   filter: brightness(1.2) contrast(1.1);
 }
 
 .logo span {
   font-family: var(--font-strong);
-  color: var(--text-light);
+  color: var(--metallic-gray);
   font-size: 1.1rem;
 }
 
@@ -309,7 +309,7 @@ p {
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(145deg, rgba(10, 17, 40, 0.6), rgba(0, 31, 63, 0.7));
+  background: linear-gradient(145deg, rgba(10, 17, 40, 0.4), rgba(0, 31, 63, 0.5));
   z-index: 1;
 }
 
@@ -858,13 +858,14 @@ p {
   }
   
   .logo img {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     margin-right: 0.75rem;
   }
   
   .logo span {
     font-size: 1.3rem;
+    color: var(--metallic-gray);
   }
   
   /* Hide mobile toggle, show horizontal nav */
@@ -893,7 +894,9 @@ p {
     padding: 0.5rem 0;
     position: relative;
   }
-  
+  .logo span {
+    color: var(--metallic-gray);
+  }
   .nav__link::after {
     content: '';
     position: absolute;
@@ -1033,6 +1036,7 @@ p {
   
   .logo span {
     font-size: 1.5rem;
+    color: var(--metallic-gray);
   }
   
   .nav__list {

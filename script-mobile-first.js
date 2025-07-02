@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
   root.style.setProperty('--img-url', fondoImgs[currentBg]);
   
   // Menor frecuencia en móvil para mejor rendimiento
-  const bgInterval = isMobile() ? 8000 : 6000;
+  const bgInterval = isMobile() ? 6000 : 4000;
   
   setInterval(() => {
     currentBg = (currentBg + 1) % fondoImgs.length;

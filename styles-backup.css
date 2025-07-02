@@ -117,11 +117,11 @@ h1,h2,h3,h4 { margin-bottom:.5rem; }
   
 }
 .logo { display:flex; align-items:center; text-decoration:none }
-.logo img { width:40px; margin-right:.75rem }
+.logo img { width:60px; margin-right:.75rem }
 .logo span {
   font-family: var(--font-strong);
   font-size:1.5rem;
-  color:#fff;
+  color:var(--metallic-gray);
 }
 .nav__link {
   color:var(--metallic-gray); text-decoration:none; font-weight:500;
@@ -378,8 +378,8 @@ h1,h2,h3,h4 { margin-bottom:.5rem; }
   
   filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
   filter: brightness(1.2) contrast(1.1);
-   
-  width: 40px; margin-right: 0.75rem; }
+   height: 60px;
+  width: 60px; margin-right: 0.75rem; }
 .logo span {
   font-family: var(--font-strong);
   color: var(--text-light);
