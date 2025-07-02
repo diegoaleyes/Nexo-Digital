@@ -95,14 +95,8 @@ p {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
-  background: var(--menta-verde);
-  border-radius: 12px;
-
 }
 
-.fade-in.visible p {
-  color: var(--text-light);
-}
 /* ───────────────────────────
    TOPBAR - Mobile First
 ──────────────────────────── */
