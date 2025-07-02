@@ -9,19 +9,19 @@
   <!-- Fuentes -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles.css" />
+  <!-- CSS Mobile-First -->
+  <link rel="stylesheet" href="styles-mobile-first.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
-  <!-- JS -->
-  <script src="script.js" defer></script>
+  <!-- JS Mobile-First -->
+  <script src="script-mobile-first.js" defer></script>
 </head>
 
 <body>
   <!-- Topbar -->
   <div class="topbar">
     <div class="topbar__left">
-      <span>📞 +34 600 78 41 69</span>
+      <span><img src="./telefono clasico contacto topbar.png" alt="telefono"> +34 600 78 41 69</span>
       <span class="topbar__sep">|</span>
       <a href="mailto:info@nexodigital.com">info@nexodigital.com</a>
     </div>
@@ -33,18 +33,17 @@
     </div>
   </div>
 
-  <!-- NAVBAR: ahora justo debajo de topbar -->
+  <!-- NAVBAR Mobile-First -->
   <nav class="navbar">
     <a href="#" class="logo">
-      <img src="./cubo metalico nexo digital.png" alt="NexoDigital Logo" />
+      <img src="./logo NexoDigital monochromatic elegan.png" alt="NexoDigital Logo" />
       <span class="texto-metal">Nexo Digital</span>
     </a>
-   <button class="nav__toggle" aria-label="Menú">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
-
+    <button class="nav__toggle" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <ul class="nav__list">
       <li><a href="#" class="nav__link active">Home</a></li>
       <li><a href="#servicios" class="nav__link">Servicios</a></li>
@@ -52,7 +51,6 @@
       <li><a href="#blog" class="nav__link">Blog</a></li>
       <li><a href="#contacto" class="nav__link">Contacto</a></li>
     </ul>
-    
   </nav>
 
   <header class="hero">
@@ -76,24 +74,23 @@
   <main>
     <!-- SECCIÓN 1: Sobre Nosotros -->
    <section class="section diagonal-bottom sobre-nosotros">
-  <div class="container sobre-nosotros__contenido">
-    <div class="sobre-nosotros__texto">
-      <h2>Mucho más que diseño web</h2>
-      <p>Entendemos tu negocio, hablamos tu idioma y te acompañamos de principio a fin.</p>
-      <p>En NexoDigital ayudamos a <strong>pequeños negocios y autónomos</strong> a dar el salto al mundo online de forma profesional, cercana y sin complicaciones.</p>
-      <p>No somos una gran agencia. Somos especialistas en pymes, con más de <strong>15 años de experiencia comercial</strong> asesorando a negocios reales en Málaga. Sabemos lo que tu empresa necesita porque <strong>hablamos tu mismo idioma</strong>.</p>
-      <p>Te acompañamos de principio a fin: desde definir objetivos, elegir el diseño correcto, posicionar tu web en Google, hasta darte soporte cuando más lo necesites.</p>
-      <p><em>Diseñamos webs que no solo se ven bien, sino que funcionan y venden.</em></p>
-    </div>
+      <div class="container sobre-nosotros__contenido">
+        <div class="sobre-nosotros__texto">
+          <h2>Mucho más que diseño web</h2>
+          <p>Entendemos tu negocio, hablamos tu idioma y te acompañamos de principio a fin.</p>
+          <p>En NexoDigital ayudamos a <strong>pequeños negocios y autónomos</strong> a dar el salto al mundo online de forma profesional, cercana y sin complicaciones.</p>
+          <p>No somos una gran agencia. Somos especialistas en pymes, con más de <strong>15 años de experiencia comercial</strong> asesorando a negocios reales en Málaga. Sabemos lo que tu empresa necesita porque <strong>hablamos tu mismo idioma</strong>.</p>
+          <p>Te acompañamos de principio a fin: desde definir objetivos, elegir el diseño correcto, posicionar tu web en Google, hasta darte soporte cuando más lo necesites.</p>
+          <p><em>Diseñamos webs que no solo se ven bien, sino que funcionan y venden.</em></p>
+        </div>
 
-    <div class="sobre-nosotros__card fade-in">
-      <img src="./analysis.png" alt="Tecnologías utilizadas" />
-      <h3>Tecnología + Estrategia</h3>
-      <p>Herramientas modernas, resultados visibles. Creamos tu web con foco en conversión.</p>
-    </div>
-  </div>
-</section>
-
+        <div class="sobre-nosotros__card fade-in">
+          <img src="./analysis.png" alt="Tecnologías utilizadas" />
+          <h3>Tecnología + Estrategia</h3>
+          <p>Herramientas modernas, resultados visibles. Creamos tu web con foco en conversión.</p>
+        </div>
+      </div>
+    </section>
 
     <!-- Servicios -->
     <section id="servicios" class="section servicios diagonal-top diagonal-bottom fade-in">
@@ -125,68 +122,68 @@
       <h2 class="section__title">Casos Reales de Pymes en Málaga</h2>
       <p class="section__subtitle">Proyectos adaptados a cada cliente y presupuesto.</p>
       <div class="swiper proyectos-swiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide proyecto-card">
-      <img src="cafe grid.png" alt="Pizzería Dieci" />
-    </div>
-    <div class="swiper-slide proyecto-card">
-      <img src="pizzeria dieci.png" alt="Café Grid" />
-    </div>
-    <div class="swiper-slide proyecto-card" >
-      <img src="naranja tablet.jpg" alt="Landing Profesional" />
-    </div>
-  </div>
-  <!-- Botones de navegación -->
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-</div>
-</section>
-<!-- Seccion Blog -->
+        <div class="swiper-wrapper">
+          <div class="swiper-slide proyecto-card">
+            <img src="cafe grid.png" alt="Pizzería Dieci" />
+          </div>
+          <div class="swiper-slide proyecto-card">
+            <img src="pizzeria dieci.png" alt="Café Grid" />
+          </div>
+          <div class="swiper-slide proyecto-card" >
+            <img src="naranja tablet.jpg" alt="Landing Profesional" />
+          </div>
+        </div>
+        <!-- Botones de navegación -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
+    <!-- Seccion Blog -->
     <section id="blog" class="section blog diagonal-top diagonal-bottom fade-in">
-  <h2 class="section__title">Blog: Consejos y Recursos</h2>
-  <div class="grid blog__grid">
-    
-    <article class="card blog-post">
-      <img src="./kit digital img.png" alt="Blog Kit Digital">
-      <div class="blog-post__content">
-        <h3 class="blog-post__title">¿No accediste al Kit Digital?</h3>
-        <p class="blog-post__preview">Muchos negocios en Málaga oyeron del Kit Digital… y se llevaron un chasco.</p>
-        <button class="btn-toggle">Leer más</button>
-        <div class="blog-post__full">
-          <h4>¿Y ahora qué?</h4>
-          <p>Existen soluciones accesibles para tener una web funcional y bien hecha sin depender de subvenciones.</p>
-          <a href="#contacto" class="btn btn--primary">Hablemos sin compromiso</a>
-        </div>
+      <h2 class="section__title">Blog: Consejos y Recursos</h2>
+      <div class="grid blog__grid">
+        
+        <article class="card blog-post">
+          <img src="./kit digital img.png" alt="Blog Kit Digital">
+          <div class="blog-post__content">
+            <h3 class="blog-post__title">¿No accediste al Kit Digital?</h3>
+            <p class="blog-post__preview">Muchos negocios en Málaga oyeron del Kit Digital… y se llevaron un chasco.</p>
+            <button class="btn-toggle">Leer más</button>
+            <div class="blog-post__full">
+              <h4>¿Y ahora qué?</h4>
+              <p>Existen soluciones accesibles para tener una web funcional y bien hecha sin depender de subvenciones.</p>
+              <a href="#contacto" class="btn btn--primary">Hablemos sin compromiso</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card blog-post">
+          <img src="./seo.png" alt="Blog SEO Local">
+          <div class="blog-post__content">
+            <h3 class="blog-post__title">¿Qué es el SEO Local?</h3>
+            <p class="blog-post__preview">Tu negocio puede aparecer en Google cuando buscan "cafetería Málaga".</p>
+            <button class="btn-toggle">Leer más</button>
+            <div class="blog-post__full">
+              <p>El SEO Local ayuda a destacar en tu zona, atraer más visitas y competir sin grandes presupuestos.</p>
+              <a href="#contacto" class="btn btn--primary">Quiero posicionarme</a>
+            </div>
+          </div>
+        </article>
+
       </div>
-    </article>
+    </section>
 
-    <article class="card blog-post">
-      <img src="./seo.png" alt="Blog SEO Local">
-      <div class="blog-post__content">
-        <h3 class="blog-post__title">¿Qué es el SEO Local?</h3>
-        <p class="blog-post__preview">Tu negocio puede aparecer en Google cuando buscan “cafetería Málaga”.</p>
-        <button class="btn-toggle">Leer más</button>
-        <div class="blog-post__full">
-          <p>El SEO Local ayuda a destacar en tu zona, atraer más visitas y competir sin grandes presupuestos.</p>
-          <a href="#contacto" class="btn btn--primary">Quiero posicionarme</a>
-        </div>
-      </div>
-    </article>
-
-  </div>
-</section>
-<div class="separador-svg">
-  <svg viewBox="0 0 1200 100" preserveAspectRatio="none">
-    <path d="M0,0 C300,100 900,0 1200,100 L1200,0 L0,0 Z" fill="#121212"></path>
-  </svg>
-</div>
-
+    <div class="separador-svg">
+      <svg viewBox="0 0 1200 100" preserveAspectRatio="none">
+        <path d="M0,0 C300,100 900,0 1200,100 L1200,0 L0,0 Z" fill="#121212"></path>
+      </svg>
+    </div>
 
     <!-- Contacto -->
     <section id="contacto" class="section contacto fade-in">
       <h2 class="section__title">Contáctanos</h2>
       <form id="formulario-contacto" class="contact-form">
-
         <input type="text" name="nombre" placeholder="Tu nombre" required>
         <input type="email" name="email" placeholder="Tu email" required>
         <textarea name="mensaje" rows="5" placeholder="Tu mensaje"></textarea>
@@ -195,58 +192,54 @@
     </section>
   </main>
 
- 
-
    <!-- Footer -->
   <footer class="footer">
     <img src="./logo NexoDigital monochromatic elegan.png" alt="">
     <p>© 2025 NexoDigital. Todos los derechos reservados.</p>
   </footer>
-<a href="https://wa.me/34600784169" class="whatsapp-float" target="_blank" aria-label="Chatea con nosotros por WhatsApp">
-  <svg viewBox="0 0 32 32" class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg">
-    <path fill="white" d="M16 0A16 16 0 0 0 3 24.2L0 32l8.1-2.9A16 16 0 1 0 16 0Z"/>
-    <path fill="#25D366" d="M16 2a14 14 0 1 1-6.2 26.6l-.4-.2-5.6 2 2-5.5-.3-.5A13.9 13.9 0 0 1 16 2Zm0-2C7.2 0 0 7.2 0 16c0 3 0 4.8 1.6 7l-2 8 8.3-3C11 30 13.5 32 16 32a16 16 0 1 0 0-32Z"/>
-  </svg>
-</a>
 
+  <a href="https://wa.me/34600784169" class="whatsapp-float" target="_blank" aria-label="Chatea con nosotros por WhatsApp">
+    <svg viewBox="0 0 32 32" class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg">
+      <path fill="white" d="M16 0A16 16 0 0 0 3 24.2L0 32l8.1-2.9A16 16 0 1 0 16 0Z"/>
+      <path fill="#25D366" d="M16 2a14 14 0 1 1-6.2 26.6l-.4-.2-5.6 2 2-5.5-.3-.5A13.9 13.9 0 0 1 16 2Zm0-2C7.2 0 0 7.2 0 16c0 3 0 4.8 1.6 7l-2 8 8.3-3C11 30 13.5 32 16 32a16 16 0 1 0 0-32Z"/>
+    </svg>
+  </a>
 
-<script src="script.js" defer></script>
-<script>
-  document.querySelectorAll('.btn-toggle').forEach(button => {
-    button.addEventListener('click', () => {
-      const blogPost = button.closest('.blog-post');
-      blogPost.classList.toggle('active');
-    });
-  });
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<script>
-  const swiper = new Swiper('.proyectos-swiper', {
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    grabCursor: true,
-    spaceBetween: 20,
-    slidesPerView: 1,
-    breakpoints: {
-      768: {
-        slidesPerView: 2
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.proyectos-swiper', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
-      1024: {
-        slidesPerView: 3
+      grabCursor: true,
+      spaceBetween: 20,
+      slidesPerView: 1,
+      breakpoints: {
+        480: {
+          slidesPerView: 1,
+          spaceBetween: 15
+        },
+        767: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        1023: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        }
       }
-    }
-  });
-</script>
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  (function(){
-    emailjs.init("yY6EadVSGVV3RC-R9"); // reemplazá por tu User ID real
-  })();
-</script>
+    });
+  </script>
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("yY6EadVSGVV3RC-R9");
+    })();
+  </script>
 
 </body>
 </html>

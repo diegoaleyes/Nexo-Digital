@@ -40,17 +40,29 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }, { threshold: 0.3 }).observe(el);
   });
+  // ———————— Menú hamburguesa simplificado ————————
+const toggle = document.querySelector('.nav__toggle');
+const navList = document.querySelector('.nav__list');
 
-  // 👇 Menú hamburguesa
-  const toggle = document.querySelector('.nav__toggle');
-  const navList = document.querySelector('.nav__list');
-  if (toggle && navList) {
-    toggle.addEventListener('click', () => {
-      toggle.classList.toggle('open');
-      navList.classList.toggle('open');
-    });
+toggle.addEventListener('click', () => {
+  console.log('🔔 clic hamburguesa, clases antes:', navList.classList.value);
+
+  // Fallback directo: forzamos display
+  if ( navList.style.display === 'flex' ) {
+    navList.style.display = 'none';
+  } else {
+    navList.style.display = 'flex';
   }
 
+  // También seguimos intentando con la clase
+  navList.classList.toggle('active');
+  toggle.classList.toggle('open');
+
+  console.log('🔔 clic hamburguesa, clases después:', navList.classList.value,
+              'style.display=', navList.style.display);
+});
+
+  // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
   // ✅ Este bloque es el importante para “Leer más”
   document.querySelectorAll('.btn-toggle').forEach(button => {
     button.addEventListener('click', () => {
