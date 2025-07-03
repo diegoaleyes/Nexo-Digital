@@ -495,12 +495,12 @@ p {
 }
 
 .sobre-nosotros__texto h2 {
-  color: var(--text-gray);
+  color: var(--bg-dark);
   margin-bottom: 1rem;
 }
 
 .sobre-nosotros__texto p {
-  color: var(--text-gray);
+  color: var(--bg-dark);
   font-size: 0.9rem;
   line-height: 1.6;
 }
@@ -856,7 +856,8 @@ p {
   }
   
   .hero {
-    min-height: 70vh;
+    min-height: 100vh;
+
   }
   
   .hero__content h1 {
@@ -1015,6 +1016,9 @@ p {
   
   .sobre-nosotros__texto {
     flex: 2;
+  }
+  .sobre-nosotros__texto h2 {
+    color: var(--bg-dark);
   }
   
   .sobre-nosotros__card {
@@ -1446,4 +1450,11 @@ p {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.sobre-nosotros__texto h2 {
+  color: var(--text-gray);
+}
+
+.sobre-nosotros__texto p {
+  color: var(--text-gray);
 }
