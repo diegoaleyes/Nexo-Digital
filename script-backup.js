@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 👇 Hero alternando imágenes
   const slides = document.querySelectorAll('.hero__slider');
   const imgEls  = document.querySelectorAll('.slider-image');
-  const images  = ['./mac escritorio.jpg','./movil.jpg'];
+  const images  = ['./mac escritorio.jpg','./movil.jpg','./ordenador light.jpg'];
   let currentHero = 0, nextHero = 1;
   imgEls[0].src = images[0];
   imgEls[1].src = images[1];

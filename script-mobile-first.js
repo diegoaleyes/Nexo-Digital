@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   const slides = document.querySelectorAll('.hero__slider');
   const imgEls = document.querySelectorAll('.slider-image');
-  const images = ['./mac escritorio.jpg', './movil.jpg'];
+  const images = ['./mac escritorio.jpg', './movil.jpg', './ordenador light.jpg'];
   
   if (slides.length > 0 && imgEls.length > 0) {
     let currentHero = 0;
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     imgEls[1].src = images[1];
     
     // Mayor intervalo en móvil para mejor performance
-    const heroInterval = isMobile() ? 10000 : 8000;
+    const heroInterval = isMobile() ? 9000 : 6000;
     
     setInterval(() => {
       if (slides[currentHero] && slides[nextHero]) {
