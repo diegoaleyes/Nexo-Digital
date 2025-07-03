@@ -1458,3 +1458,13 @@ p {
 .sobre-nosotros__texto p {
   color: var(--text-gray);
 }
+.hero {
+  min-height: 100vh;
+}
+
+/* Si deseas modificarlo en pantallas más grandes, puedes sobreescribirlo */
+@media (min-width: 480px) {
+  .hero {
+    min-height: 100vh; /* opcional si quieres cambiarlo más adelante */
+  }
+}
