@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
   
   const root = document.documentElement;
   const fondoImgs = [
-    "url('./mac escritorio.jpg')",
-    "url('./seo madera.jpg')", 
-    "url('./movil.jpg')"
+    "url('img/macescritorio.jpg')",
+    "url('img/seo madera.jpg')", 
+    "url('img/movil.jpg')"
   ];
   
   let currentBg = 0;
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   const slides = document.querySelectorAll('.hero__slider');
   const imgEls = document.querySelectorAll('.slider-image');
-  const images = ['./mac escritorio.jpg', './movil.jpg', './ordenador light.jpg'];
+  const images = ['img/mac escritorio.jpg', 'img/ordenador light.jpg', 'img/movil.jpg'];
   
   if (slides.length > 0 && imgEls.length > 0) {
     let currentHero = 0;

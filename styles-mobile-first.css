@@ -8,7 +8,7 @@
 ──────────────────────────── */
 :root {
   /* Paleta de colores */
-  --img-url: url('./mac escritorio.jpg');
+  --img-url: url('img/mac\ escritorio.jpg');
   --cardverdementa-gradient: linear-gradient(135deg, #25D366, #e0e0e0);
   --menta-verde: #25D366;
   --primary-green: #25D366;
